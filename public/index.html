@@ -9,35 +9,59 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <style>
-            .swiper-container {
+            #swiper1 {
                 height: 900px; /* Sesuaikan dengan kebutuhan */
                 justify-items: end;
                 width: 458px;
                 position: relative;
             }
-            .swiper-button-next,
-            .swiper-button-prev {
+            #swiper1 .swiper-button-next,
+            #swiper1 .swiper-button-prev {
                 left: auto;
                 width: 44px;
                 height: 44px;
                 z-index: 10;
             }
 
-            .swiper-button-prev {
+            #swiper1 .swiper-button-prev {
                 right: 0px; /* Posisi di luar lebar container (setengah lebar tombol) */
                 top: calc(50% - 38.5px);
             }
 
-            .swiper-button-next {
+            #swiper1 .swiper-button-next {
                 top: calc(50% + 38.5px);
                 right: 0px;
+            }
+
+            #swiper2 .swiper-button-prev.swiper-button-disabled,
+            #swiper2 .swiper-button-next.swiper-button-disabled {
+                opacity: 1; /* Menonaktifkan efek disabled */
+                pointer-events: all; /* Memastikan tombol tetap bisa diklik walaupun disabled */
+            }
+
+            #swiper2 .swiper-button-prev,
+            #swiper2 .swiper-button-next {
+                left: auto;
+                width: 44px;
+                height: 44px;
+                z-index: 10;
+            }
+
+            #swiper2 .swiper-button-prev {
+                top: -66px;
+                right: 143px; /* Posisi di luar lebar container (setengah lebar tombol) */
+            }
+
+            #swiper2 .swiper-button-next {
+                top: -66px;
+                right: 62px;
             }
         </style>
         <link href="./css/output.css" rel="stylesheet" />
     </head>
     <body>
         <main class="">
-            <header class="max-w-[1280px] px-[62px] mx-auto bg-[#1A1C21] relative">
+            <header class="max-w-[1280px] px-[62px] mx-auto -mb-[94px] bg-[#1A1C21] relative">
                 <nav class="w-full border border-[#1A1C21] py-[53px] bg-[#1A1C21] flex justify-between items-center z-[1000] relative">
                     <a href="#"><img class="aspect-square min-w-[44px]" alt="icon" src="assets/icons/hero/logo-company.svg" /></a>
                     <ul class="flex items-center gap-[72px]">
@@ -57,52 +81,613 @@
                         <span><img class="aspect-square min-w-[400px]" alt="icon" src="assets/icons/hero/decor.svg" alt="icon" /></span>
                     </div>
                     <div class="absolute top-0 bottom-0 right-[62px]">
-                        <div class="swiper-container">
+                        <div id="swiper1" class="swiper-container">
                             <span class="w-full absolute top-[125px] left-0 h-[129px] bg-gradient-to-b from-[#1A1C21] to-transparent z-[1000]"></span>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img class="" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pt-2 bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)]">
-                                    <img src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                <div class="swiper-slide w-[371px] h-[298px] rounded-[20px] border border-[rgba(238,238,238,0.12)] pb-[17px] pl-[16px] bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.03)] relative flex items-end">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/hero/dealer-terverifikasi.svg" alt="icon" />
+                                    <img class="w-[339px] w-[385px] absolute left-4 bottom-[103px]" src="assets/images/hero/car1.png" alt="image" />
+                                    <div>
+                                        <h2 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">2020 Mercedes-Benz A-</h2>
+                                        <h3 class="font-medium text-lg leading-[31px] text-[#FFFFFF]">Class - Limited Edition</h3>
+                                    </div>
                                 </div>
                             </div>
-                            <span class="w-full absolute bottom-[94px] left-0 h-[129px] bg-gradient-to-t from-[#1A1C21] to-transparent z-[1000]"></span>
-                            <img class="swiper-button-prev" src="assets/icons/hero/prev.svg" alt="" />
-                            <img class="swiper-button-next" src="assets/icons/hero/next.svg" alt="" />
+                            <span class="w-full absolute bottom-[82px] left-0 h-[129px] bg-gradient-to-t from-[#1A1C21] to-transparent z-[1000]"></span>
+                            <img id="prev1" class="swiper-button-prev" src="assets/icons/hero/prev.svg" alt="icon" />
+                            <img id="next1" class="swiper-button-next" src="assets/icons/hero/next.svg" alt="icon" />
                         </div>
                     </div>
                 </section>
             </header>
-            <section>
-                <div>
-                    <div></div>
-                    <div></div>
+            <section id="beli-mobil" class="max-w-[1280px] px-[64px] pb-[120px] mx-auto relative z-50">
+                <section id="pencarian" class="w-full rounded-3xl overflow-hidden">
+                    <div class="h-[94px] p-6 bg-[#FFFFFF]">
+                        <ul class="w-full grid grid-cols-4 gap-6">
+                            <li>
+                                <a class="w-full h-[46px] border-r border-[#EDEDED] px-3 font-bold leading-[22px] -tracking-[2%] text-[#5A5E63] flex items-center" href="#">Merek Mobil</a>
+                            </li>
+                            <li>
+                                <a class="w-full h-[46px] border-r border-[#EDEDED] px-3 font-bold leading-[22px] -tracking-[2%] text-[#5A5E63] flex items-center" href="#">Merek Mobil</a>
+                            </li>
+                            <li>
+                                <a class="w-full h-[46px] border-r border-[#EDEDED] px-3 font-bold leading-[22px] -tracking-[2%] text-[#5A5E63] flex items-center" href="#">Merek Mobil</a>
+                            </li>
+                            <li>
+                                <a class="w-full h-[46px] border-r border-[#EDEDED] px-3 font-bold leading-[22px] -tracking-[2%] text-[#5A5E63] flex items-center" href="#">Merek Mobil</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form id="cari-mobil" class="w-full bg-[#080A0E] flex justify-center items-center gap-[13px]">
+                        <select name="" id="" class="h-[94px] text-[#FFFFFF] bg-[#080A0E] font-inter font-bold text-xl leading-[22px] appearance-none border-none text-end outline-none">
+                            <option value="" disabled selected>Cari Mobil</option>
+                            <option value="mobil1">Mobil 1</option>
+                            <option value="mobil2">Mobil 2</option>
+                            <option value="mobil3">Mobil 3</option>
+                        </select>
+                        <button type="submit"><img class="" src="assets/icons/mocas-terpopuler/search.svg" alt="icon" /></button>
+                    </form>
+                </section>
+                <section class="mt-[119px]">
+                    <img class="w-full" src="assets/images/mocas-terpopuler/peta.png" alt="icon" />
+                    <div id="mokas-terpopuler" class="mt-[120px] space-y-[20px]">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-inter font-bold text-[44px] leading-[53px] text-[#2F3137]">Mokas Terpopuler</h3>
+                            <a href="#">
+                                <img class="aspect-square w-[187px]" src="assets/icons/mocas-terpopuler/see-all.svg" alt="icon" />
+                            </a>
+                        </div>
+                        <div id="cards" class="grid grid-cols-3 gap-x-[19.5px] gap-y-[36px]">
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                            <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                    <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                    <div>
+                                        <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                            <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                        </div>
+                                        <div class="description">
+                                            <div class="flex justify-between items-center mb-3">
+                                                <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                <button type="button">
+                                                    <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                </button>
+                                            </div>
+                                            <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-x-1 items-center">
+                                        <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                        <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                    </div>
+                                    <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="map" class="max-w-[1280px] p-[64px] mx-auto relative bg-[#090B0F]">
+                <div class="mb-12 flex justify-between items-center">
+                    <h3 class="font-inter font-semibold text-[44px] leading-[53px] text-[#FFFFFF]">Dealer resmi dekat anda</h3>
+                    <img class="min-w-[167px]" src="assets/icons/dealer-resmi-dekat-anda/see-all.svg" alt="icon" />
+                </div>
+                <div id="map-container" class="w-full h-[443px] flex justify-center items-center relative">
+                    <img src="assets/images/dealer-resmi-dekat-anda/map.png" alt="image" />
+                    <div class="absolute bottom-0 left-0 right-0 px-[221px]">
+                        <form action="" class="w-full h-[104px] rounded-full inline-flex items-center relative overflow-hidden -bottom-[52px]">
+                            <input type="text" placeholder="Cari dealer di map" class="w-full h-full bg-[#22242A] font-inter text-2xl leading-[22px] text-[#FFFFFF] border-none outline-none placeholder:font-inter placeholder:text-2xl placeholder:leading-[22px] placeholder:text-[#8F9498] pl-10" />
+                            <button class="absolute right-6 top-1/2 -translate-y-1/2">
+                                <img class="min-w-14" src="assets/icons/dealer-resmi-dekat-anda/search.svg" alt="icon" />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div id="kaegori-dealer" class="flex items-center gap-x-[21px] mt-[153px]">
+                    <div class="dealer w-full p-4 rounded-[24px] border border-[rgba(237,237,237,0.22)] bg-gradient-to-b from-[#1C1F24] to-[#0C0E12]">
+                        <div class="size-[139px] mx-auto mb-3 flex justify-center items-center">
+                            <img class="object-cover w-full h-full" src="assets/images/dealer-resmi-dekat-anda/dealer-1.png" alt="icon" />
+                        </div>
+                        <h5 class="mb-3 font-inter font-medium text-xl leading-[31.2px] text-[#FFFFFF] text-center">Honda Dealership</h5>
+                        <div class="location mb-3 flex items-center gap-x-2 justify-center">
+                            <img class="min-w-4" src="assets/icons/dealer-resmi-dekat-anda/location.svg" alt="icon" />
+                            <p class="font-inter leading-[19px] text-[#8F9499]">Bekasi</p>
+                        </div>
+                        <a href="#" class="border border-[rgba(231,231,233,0.18)] rounded-full p-4 flex items-center justify-center gap-x-3">
+                            <p class="font-inter font-semibold leading-[20px] text-[#FFFFFF]">Cek Dealer</p>
+                            <img class="min-w-[18px]" src="assets/icons/dealer-resmi-dekat-anda/right.svg" alt="icon" />
+                        </a>
+                    </div>
+                    <div class="dealer w-full p-4 rounded-[24px] border border-[rgba(237,237,237,0.22)] bg-gradient-to-b from-[#1C1F24] to-[#0C0E12]">
+                        <div class="size-[139px] mx-auto mb-3 flex justify-center items-center">
+                            <img class="object-cover w-full h-full" src="assets/images/dealer-resmi-dekat-anda/dealer-1.png" alt="icon" />
+                        </div>
+                        <h5 class="mb-3 font-inter font-medium text-xl leading-[31.2px] text-[#FFFFFF] text-center">Honda Dealership</h5>
+                        <div class="location mb-3 flex items-center gap-x-2 justify-center">
+                            <img class="min-w-4" src="assets/icons/dealer-resmi-dekat-anda/location.svg" alt="icon" />
+                            <p class="font-inter leading-[19px] text-[#8F9499]">Bekasi</p>
+                        </div>
+                        <a href="#" class="border border-[rgba(231,231,233,0.18)] rounded-full p-4 flex items-center justify-center gap-x-3">
+                            <p class="font-inter font-semibold leading-[20px] text-[#FFFFFF]">Cek Dealer</p>
+                            <img class="min-w-[18px]" src="assets/icons/dealer-resmi-dekat-anda/right.svg" alt="icon" />
+                        </a>
+                    </div>
+                    <div class="dealer w-full p-4 rounded-[24px] border border-[rgba(237,237,237,0.22)] bg-gradient-to-b from-[#1C1F24] to-[#0C0E12]">
+                        <div class="size-[139px] mx-auto mb-3 flex justify-center items-center">
+                            <img class="object-cover w-full h-full" src="assets/images/dealer-resmi-dekat-anda/dealer-1.png" alt="icon" />
+                        </div>
+                        <h5 class="mb-3 font-inter font-medium text-xl leading-[31.2px] text-[#FFFFFF] text-center">Honda Dealership</h5>
+                        <div class="location mb-3 flex items-center gap-x-2 justify-center">
+                            <img class="min-w-4" src="assets/icons/dealer-resmi-dekat-anda/location.svg" alt="icon" />
+                            <p class="font-inter leading-[19px] text-[#8F9499]">Bekasi</p>
+                        </div>
+                        <a href="#" class="border border-[rgba(231,231,233,0.18)] rounded-full p-4 flex items-center justify-center gap-x-3">
+                            <p class="font-inter font-semibold leading-[20px] text-[#FFFFFF]">Cek Dealer</p>
+                            <img class="min-w-[18px]" src="assets/icons/dealer-resmi-dekat-anda/right.svg" alt="icon" />
+                        </a>
+                    </div>
+                    <div class="dealer w-full p-4 rounded-[24px] border border-[rgba(237,237,237,0.22)] bg-gradient-to-b from-[#1C1F24] to-[#0C0E12]">
+                        <div class="size-[139px] mx-auto mb-3 flex justify-center items-center">
+                            <img class="object-cover w-full h-full" src="assets/images/dealer-resmi-dekat-anda/dealer-1.png" alt="icon" />
+                        </div>
+                        <h5 class="mb-3 font-inter font-medium text-xl leading-[31.2px] text-[#FFFFFF] text-center">Honda Dealership</h5>
+                        <div class="location mb-3 flex items-center gap-x-2 justify-center">
+                            <img class="min-w-4" src="assets/icons/dealer-resmi-dekat-anda/location.svg" alt="icon" />
+                            <p class="font-inter leading-[19px] text-[#8F9499]">Bekasi</p>
+                        </div>
+                        <a href="#" class="border border-[rgba(231,231,233,0.18)] rounded-full p-4 flex items-center justify-center gap-x-3">
+                            <p class="font-inter font-semibold leading-[20px] text-[#FFFFFF]">Cek Dealer</p>
+                            <img class="min-w-[18px]" src="assets/icons/dealer-resmi-dekat-anda/right.svg" alt="icon" />
+                        </a>
+                    </div>
                 </div>
             </section>
+            <section id="rekomendasi-mobil" class="max-w-[1280px] py-[120px] mx-auto overflow-hidden">
+                <div>
+                    <div class="flex justify-between items-center pr-[227px] mb-9 pl-[62px]">
+                        <h3 class="font-inter font-semibold text-[40px] leading-[48px] -tracking-[2%] text-[#2F3137]">Rekomendasi mobil baru</h3>
+                        <a href="#"><img class="max-w-[167px]" src="assets/icons/rekomendasi-mobil-baru/see-all.svg" alt="icon" /></a>
+                    </div>
+                    <div id="swiper2" class="swiper-container relative">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide w-auto">
+                                <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                    <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                        <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                        <div>
+                                            <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                                <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                            </div>
+                                            <div class="description">
+                                                <div class="flex justify-between items-center mb-3">
+                                                    <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                    <button type="button">
+                                                        <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                    </button>
+                                                </div>
+                                                <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 flex justify-between items-center">
+                                        <div class="flex gap-x-1 items-center">
+                                            <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                            <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                        </div>
+                                        <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                    <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                        <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                        <div>
+                                            <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                                <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                            </div>
+                                            <div class="description">
+                                                <div class="flex justify-between items-center mb-3">
+                                                    <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                    <button type="button">
+                                                        <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                    </button>
+                                                </div>
+                                                <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 flex justify-between items-center">
+                                        <div class="flex gap-x-1 items-center">
+                                            <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                            <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                        </div>
+                                        <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                    <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                        <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                        <div>
+                                            <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                                <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                            </div>
+                                            <div class="description">
+                                                <div class="flex justify-between items-center mb-3">
+                                                    <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                    <button type="button">
+                                                        <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                    </button>
+                                                </div>
+                                                <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 flex justify-between items-center">
+                                        <div class="flex gap-x-1 items-center">
+                                            <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                            <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                        </div>
+                                        <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                    <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                        <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                        <div>
+                                            <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                                <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                            </div>
+                                            <div class="description">
+                                                <div class="flex justify-between items-center mb-3">
+                                                    <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                    <button type="button">
+                                                        <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                    </button>
+                                                </div>
+                                                <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 flex justify-between items-center">
+                                        <div class="flex gap-x-1 items-center">
+                                            <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                            <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                        </div>
+                                        <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <div class="card w-[371px] h-[387px] rounded-[20px] border border-[#EDEDED] bg-[#F7F7F8] relative overflow-hidden">
+                                    <div class="w-full h-[342px] rounded-b-[20px] p-4 pb-[19px] bg-[#FFFFFF]">
+                                        <img class="aspect-square min-w-[147px] absolute top-2 left-2" src="assets/icons/mocas-terpopuler/dealer-terverifikasi.svg" alt="icon" />
+                                        <div>
+                                            <div class="w-full h-[179px] mb-6 flex items-center justify-center">
+                                                <img class="w-full h-full object-cover" src="assets/images/mocas-terpopuler/bmw.png" alt="image" />
+                                            </div>
+                                            <div class="description">
+                                                <div class="flex justify-between items-center mb-3">
+                                                    <h4 class="font-inter font-medium text-[18px] leading-[31.2px] text-[#0E1015] w-[240px]">2018 BMW M4 3.0 Coupe Yellow Edition</h4>
+                                                    <button type="button">
+                                                        <img class="aspect-square w-8" src="assets/icons/mocas-terpopuler/love.svg" alt="icon" />
+                                                    </button>
+                                                </div>
+                                                <strong class="font-inter font-bold text-2xl leading-[29px] text-[#0E1015]"><span class="text-[rgba(14,16,21,0.4)]">Rp </span>1,700,000,000</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2 flex justify-between items-center">
+                                        <div class="flex gap-x-1 items-center">
+                                            <img class="aspect-square w-4" src="assets/icons/mocas-terpopuler/location.svg" alt="icon" />
+                                            <p class="font-inter font-medium text-[11px] leading-[13px] text-[#8F9499]">Sudirman, Jakarta Pusat</p>
+                                        </div>
+                                        <span><img class="min-w-[77px]" src="assets/icons/mocas-terpopuler/negotiable.svg" alt="icon" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img id="prev2" class="swiper-button-prev" src="assets/icons/rekomendasi-mobil-baru/prev.svg" alt="icon" />
+                        <img id="next2" class="swiper-button-next" src="assets/icons/rekomendasi-mobil-baru/next.svg" alt="icon" />
+                    </div>
+                </div>
+            </section>
+            <footer class="pt-[62px] pl-[62px] pr-[206px]">
+                <div class="w-[574px]">
+                    <h2 class="mb-6 font-inter font-extrabold text-[64px] leading-[77px] -tracking-[2%] text-[#2F3137]">Supacars</h2>
+                    <p class="mb-6 font-inter leading-[160%] text-[#595959]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum ultricies nunc at tempor. Donec et nibh commodo risus pretium hendrerit ut vitae mi. Curabitur tincidunt nibh non purus condimentum laoreet. Cras vel laoreet sem. Donec ultricies justo ut orci tincidunt euismod. Sed auctor nec lacus nec viverra.</p>
+                    <div class="flex gap-x-6">
+                        <div class="flex items-center gap-x-3">
+                            <img class="min-w-6" src="assets/icons/footer/location.svg" alt="icon" />
+                            <p class="font-inter leading-[22px] -tracking-[2%] text-[#595959]">Jakarta Selatan, Indonesia</p>
+                        </div>
+                        <div class="flex items-center gap-x-3">
+                            <img class="min-w-6" src="assets/icons/footer/location.svg" alt="icon" />
+                            <p class="font-inter leading-[22px] -tracking-[2%] text-[#595959]">+62 0876-3456-3212</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-inter font-bold text-2xl leading-[22px] -tracking-[2%] text-[#2F3137]">Parkir</h3>
+                </div>
+                <div></div>
+            </footer>
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script>
-                const swiper = new Swiper(".swiper-container", {
+                const swiper1 = new Swiper("#swiper1", {
                     direction: "vertical",
                     slidesPerView: 3,
                     spaceBetween: 17,
                     navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                        nextEl: "#next1",
+                        prevEl: "#prev1",
                     },
                     loop: true,
+                });
+                const swiper2 = new Swiper("#swiper2", {
+                    direction: "horizontal",
+                    slidesPerView: "auto",
+                    spaceBetween: 21,
+                    slidesOffsetBefore: 62,
+                    slidesOffsetAfter: 62,
+                    navigation: {
+                        nextEl: "#next2",
+                        prevEl: "#prev2",
+                    },
+                    watchOverflow: false,
                 });
             </script>
             <!-- <script type="module" src="js/index.js"></script> -->
